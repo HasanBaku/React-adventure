@@ -37,6 +37,21 @@ function Navbar() {
         };
       }, []);
 
+
+      useEffect(() => {
+        // Add or remove the 'no-scroll' class based on the 'click' state
+        if (click) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    
+        // Cleanup the class when the component unmounts or 'click' state changes
+        return () => {
+            document.body.classList.remove('no-scroll');
+        };
+    }, [click]);
+
   return (
     <div>
         <nav className="navbar">

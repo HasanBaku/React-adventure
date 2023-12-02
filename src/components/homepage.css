@@ -1,7 +1,10 @@
 *{
   text-decoration: none;
 }
-body{
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 .hero-section {
@@ -188,5 +191,27 @@ body{
   }
   .down-cards{
     flex-direction: column;
+  }
+  .card-section{
+    padding: 15%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .text-content h1{
+    font-size: 3em;
+  }
+  .text-content p{
+    font-size: 1.2em;
+  }
+  .get-started{
+    font-size: 1em;
+    padding-left: 15px;
+  }
+  .watch-trailer{
+    font-size: 1em;
+  }
+  .card-section{
+    padding: 13%;
   }
 }
